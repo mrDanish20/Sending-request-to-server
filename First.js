@@ -10,28 +10,72 @@ Server.createServer(function (req, res) {
         res.writeHead(200, { "Content-Type": "text/html" });
         res.write(`<h1>Home Page</h1> 
         <ul>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/services">Services</a></li>
-       </ul> `);
-
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/Setting">Setting</a></li>
+        </ul>`);
         res.end();
 
     } else if (req.url === "/about") {
         res.writeHead(200, { "Content-Type": "text/html" });
-        res.write(`<h1>About Page</h1>`);
+        res.write(`<h1>About Page</h1> 
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/Setting">Setting</a></li>
+        </ul>`);
         res.end();
+
     } else if (req.url === "/contact") {
         res.writeHead(200, { "Content-Type": "text/html" });
-        res.write(`<h1>Contact Page</h1>`);
+        res.write(`<h1>Contact Page</h1> 
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/Setting">Setting</a></li>
+        </ul>`);
         res.end();
+
     } else if (req.url === "/services") {
         res.writeHead(200, { "Content-Type": "text/html" });
-        res.write(`<h1>Services Page</h1>`);
+        res.write(`<h1>Services Page</h1> 
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/Setting">Setting</a></li>
+        </ul>`);
         res.end();
+
+    } else if (req.url === "/Setting") {
+        res.writeHead(200, { "Content-Type": "text/html" });
+        res.write(`<h1>Setting Page</h1> 
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/Setting">Setting</a></li>
+        </ul>`);
+        res.end();
+
     } else {
         res.writeHead(404, { "Content-Type": "text/html" });
-        res.write(`<h1>Page Not Found</h1>`);
+        res.write(`<h1>Page Not Found</h1> 
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/Setting">Setting</a></li>
+        </ul>`);
         res.end();
     }
 
@@ -41,5 +85,4 @@ Server.createServer(function (req, res) {
     if (process.platform === "win32") {
         exec(`start ${u}`);
     }
-
 });
